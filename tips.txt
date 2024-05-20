@@ -1,0 +1,4 @@
+```js
+socket.emit goes only to the user
+socket.broadcast.emit goes to everyone except the user
+```
