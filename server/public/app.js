@@ -96,7 +96,7 @@ function showUsers(users){
 };
 
 function showRooms(rooms){
-    roomList.textContent = "";
+    // roomList.textContent = "";
     if(rooms){
         roomList.innerHTML = '<em>Active Rooms:</em>';
         rooms.forEach((room, i) => {
@@ -108,12 +108,13 @@ function showRooms(rooms){
     }
     else if(!rooms){
         roomList.innerHTML = '<em>Active Rooms: None</em>';
+        
+        roomList.innerHTML = '<em>Active Rooms:</em>';
+        rooms.forEach((room, i) => {
+            roomList.textContent += ` ${room}`;
+            if(rooms.length > 1 && i !== rooms.length - 1){
+                roomList.textContent += ",";
+            }
+        });
     }
 };
-
-if(room.length === 0){
-    roomList.innerHTML = "No active rooms found!";
-}
-else{
-    showRooms();
-}
