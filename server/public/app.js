@@ -106,9 +106,12 @@ function showRooms(rooms){
             }
         });
     }
+    else if(!rooms){
+        roomList.innerHTML = '<em>Active Rooms: None</em>';
+    }
 };
 
-if(rooms.length === 0){
+if(room.length === 0){
     roomList.innerHTML = "No active rooms found!";
 }
 else{
