@@ -1,4 +1,5 @@
 const socket = io('https://chatappez.onrender.com');
+// const socket = io('http://localhost:5500');
 
 const msgInput = document.querySelector('#message');
 const nameInput = document.querySelector('#name');
@@ -107,4 +108,4 @@ function showRooms(rooms){
     }
 };
 
-showRooms(rooms);
+showRooms();
