@@ -96,7 +96,7 @@ function showUsers(users){
 };
 
 function showRooms(rooms){
-    roomList.textContent = "No active rooms found!";
+    roomList.textContent = "";
     if(rooms){
         roomList.innerHTML = '<em>Active Rooms:</em>';
         rooms.forEach((room, i) => {
@@ -108,4 +108,9 @@ function showRooms(rooms){
     }
 };
 
-showRooms();
+if(rooms.length === 0){
+    roomList.innerHTML = "No active rooms found!";
+}
+else{
+    showRooms();
+}
