@@ -108,12 +108,5 @@ function showRooms(rooms){
     }
     else if(!rooms){
         roomList.innerHTML = '<em>Active Rooms: None</em>';
-        
-        rooms.forEach((room, i) => {
-            roomList.textContent += ` ${room}`;
-            if(rooms.length > 1 && i !== rooms.length - 1){
-                roomList.textContent += ",";
-            }
-        });
     }
 };
