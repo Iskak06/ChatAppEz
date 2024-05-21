@@ -106,3 +106,5 @@ function showRooms(rooms){
         });
     }
 };
+
+showRooms(rooms);
